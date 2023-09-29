@@ -1,0 +1,204 @@
+html, body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    text-align: center !important;
+    padding-bottom: 10%;
+}
+
+/*1-Animated div background color*/
+/*CSS animations are similar to transitions in that values of CSS properties change 
+over time, but provide much more control over how those changes happen.*/
+.anim-bg-color{
+    width:20%;
+    height:20%;
+    margin: 2% auto 2% auto;
+    border: 2px solid #000000;
+    animation-name: change_bg_color;
+    animation-duration: 8s;         /* duration in second */
+    animation-direction: alternate; /* alternate or reverse */ 
+    animation-delay: 3s;            /* delay to start when accessing the page */
+    animation-iteration-count: 3;   /* how many times 1,2,3... or infinite */
+    animation-timing-function: linear;
+}
+
+@keyframes change_bg_color {
+    0%, 100% {
+        background-color: rgb(0, 255, 38);
+    }
+    25% {
+        background-color: yellow;    
+    }
+    50% {
+        background-color: blue;    
+    }
+    75% {
+        background-color: rgb(255, 174, 0);    
+    }
+}
+
+/*2-Animated div background and border color*/
+.anim-bg-bd-color{
+    width:20%;
+    height:20%;
+    margin: 2% auto 2% auto;
+    border: 4px solid;
+    animation-name: change_bg_bd_color;
+    animation-duration: 18s;         /* duration in second */
+    animation-direction: reverse; /* alternate or reverse */ 
+    animation-delay: 5s;            /* delay to start when accessing the page */
+    animation-iteration-count: 2;   /* how many times 1,2,3... or infinite */
+    animation-timing-function:step-start;
+}
+
+@keyframes change_bg_bd_color {
+    0%, 100% {
+        background-color: rgb(0, 255, 38);
+        border-color: #19def8;
+    }
+    75% {
+        background-color: yellow;  
+        border-color: #f81946;  
+    }
+    50% {
+        background-color: blue;
+        border-color: #90f819;    
+    }
+    25% {
+        background-color: rgb(255, 174, 0); 
+        border-color: #939492;   
+    }
+}
+
+/*3-Animated div border radius*/
+.anim-bd-radius{
+    width:20%;
+    height:20%;
+    margin: 2% auto 2% auto;
+    border: 5px solid;
+    animation-name: change_bd_radius;
+    animation-duration: 4s;         
+    animation-direction:alternate-reverse; 
+    animation-delay: 3s;            
+    animation-iteration-count: infinite;   
+    animation-timing-function:linear;
+}
+
+@keyframes change_bd_radius {
+    0% {
+        border-radius: 33%;
+    }
+    20% {
+        border-radius: 66%;  
+    }
+    40% {
+        border-radius: 100%;    
+    }
+}
+
+/*4-Animated div margin*/
+.anim-margin{
+    width:20%;
+    height:10%;
+    margin: 2% auto 2% auto;
+    border: 5px solid;
+    animation-name: change_margin;
+    animation-delay: 2s;                   
+    animation-duration: 4s;                
+    animation-iteration-count: 3;   
+    animation-timing-function:cubic-bezier(0.50, 1, 0.50, 0);
+}
+
+@keyframes change_margin {
+    0% {
+        margin-left: 40%;
+    }
+    25% {
+        margin-left: 60%;
+    }
+    50% {
+        margin-left: 40%;
+    }
+    100% {
+        margin-left: 20%;
+    }
+}
+
+/*5-Animated div background color*/
+.transit-bg-color{
+    width:20%;
+    height:20%;
+    margin: 2% auto 2% auto;
+    border: 1px solid;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-delay: 0s;
+    transition-timing-function:ease-in;
+}
+
+.transit-bg-color:hover{
+    background-color:#5cf819;
+}
+
+/*6-Animated div width, height, and border radius*/
+/*CSS transitions provide a way to control how a property changes 
+from one value to the next over a period of time.
+Transitions can only occur on properties that are not currently
+being impacted by a CSS animation.*/
+.transit-width-height-bd-radius{
+    width:20%;
+    height:20%;
+    margin: 2% auto 2% auto;
+    border: 1px solid #000000;
+    color:#ffffff;
+    transition-property: width, height, border-radius;
+    transition-duration: 2s;
+    transition-delay: 0s;
+    transition-timing-function:ease-in;
+}
+
+.transit-width-height-bd-radius:hover{
+    width: 40%;
+    height:30%; 
+    border-radius:10%;
+    color:#f97407;
+    padding-top: 3%;
+    line-height: 25px;
+}
+
+/*7-Transform div sides via an animation*/
+/*A two-dimensional transformation is applied to an element 
+through the 'transform' property. This property contains 
+a list of transform functions*/
+.transform-sides{
+    width:20%;
+    height:20%;
+    margin: 2% auto 2% auto;
+    border: 4px solid;
+    animation-name: change_side_position;
+    animation-duration: 18s;         /* duration in second */
+    animation-direction: reverse; /* alternate or reverse */ 
+    animation-delay: 5s;            /* delay to start when accessing the page */
+    animation-iteration-count: 2;   /* how many times 1,2,3... or infinite */
+    animation-timing-function:step-start;
+}
+
+@keyframes change_side_position {
+    0%, 100% {
+        transform: translate(40px, -20px);
+    }
+    75% {
+        transform: rotate(25deg);
+        transform-origin: bottom left;  
+    }
+    50% {
+        transform: scale(2.2, .7);
+        transform-origin: bottom left;    
+    }
+    25% {
+        transform: skew(33deg, 10deg);
+        transform-origin: top left;   
+    }
+}
