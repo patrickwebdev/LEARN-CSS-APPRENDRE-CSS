@@ -1,3 +1,26 @@
+/*
+CSS ANIMATION : continuous change of properties and values, or just the values assigned to properties,
+to make an element look dynamic (i.e. change color, font-family, size, border...)  
+with a lot of control on how those changes happen. 
+Some of the common properties used to control include:
+duration, direction, delay, iteration-count, timing-function (progression cycle)
+*/
+
+/*
+CSS TRANSITION : control the way the value of a property changes 
+from an initial value to the next during a period of time. It allows for example 
+to indicate both the new color to display a text when a cursor is passed on it 
+and the time it will take to move from the initial color.
+*/
+
+/*
+CSS TRANSFORM : properties that is used to apply a 2 or 3 dimensional transformation on an 
+element with the use of a fonction. It allows for example to move an image to 360 degrees. 
+The common fonctions are: translate(), translate3d(), translateX(), translateY(), translateZ(),
+scale(), scale3d(), scaleX(), scaleY(), scaleZ(), rotate(), rotate3d(), rotateX(), rotateY()
+rotateZ(), skew(), skewX(), skewY(), matrix(), matrix3d(), and perspective()
+*/
+
 html, body{
     width:100%;
     height:100%;
@@ -9,8 +32,6 @@ body{
 }
 
 /*1-Animated div background color*/
-/*CSS animations are similar to transitions in that values of CSS properties change 
-over time, but provide much more control over how those changes happen.*/
 .anim-bg-color{
     width:20%;
     height:20%;
@@ -21,7 +42,7 @@ over time, but provide much more control over how those changes happen.*/
     animation-direction: alternate; /* alternate or reverse */ 
     animation-delay: 3s;            /* delay to start when accessing the page */
     animation-iteration-count: 3;   /* how many times 1,2,3... or infinite */
-    animation-timing-function: linear;
+    animation-timing-function: linear; /* how is the progression... linear, ease, cubic-bezier... */ 
 }
 
 @keyframes change_bg_color {
@@ -143,10 +164,6 @@ over time, but provide much more control over how those changes happen.*/
 }
 
 /*6-Animated div width, height, and border radius*/
-/*CSS transitions provide a way to control how a property changes 
-from one value to the next over a period of time.
-Transitions can only occur on properties that are not currently
-being impacted by a CSS animation.*/
 .transit-width-height-bd-radius{
     width:20%;
     height:20%;
@@ -200,5 +217,103 @@ a list of transform functions*/
     25% {
         transform: skew(33deg, 10deg);
         transform-origin: top left;   
+    }
+}
+
+/*7-Transform div sides via an animation*/
+.transform-sides-orientation{
+    width:20%;
+    height:20%;
+    margin: 2% auto 2% auto;
+    border: 8px solid;
+    border-top:8px solid #f81946;
+    border-bottom:8px solid #1958f8;
+    border-radius : 10%;
+    animation-name: change_side_orientation;
+    animation-duration: 18s;         
+    animation-direction: right;  
+    animation-delay: 5s;            
+    animation-iteration-count: 2;   
+    animation-timing-function:ease;
+}
+
+@keyframes change_side_orientation {
+    from {
+        transform: rotate(15deg);
+    }
+    4% {
+        transform: rotate(30deg);  
+    }
+    8% {
+        transform: rotate(45deg);    
+    }
+    12% {
+        transform: rotate(60deg);   
+    }
+    16% {
+        transform: rotate(75deg);
+    }
+    20% {
+        transform: rotate(90deg);  
+    }
+    24% {
+        transform: rotate(105deg);    
+    }
+    28% {
+        transform: rotate(120deg);   
+    }
+    32% {
+        transform: rotate(135deg);
+    }
+    36% {
+        transform: rotate(150deg);  
+    }
+    40% {
+        transform: rotate(165deg);    
+    }
+    44% {
+        transform: rotate(180deg);   
+    }
+    48% {
+        transform: rotate(195deg);
+    }
+    52% {
+        transform: rotate(210deg);  
+    }
+    56% {
+        transform: rotate(215deg);    
+    }
+    60% {
+        transform: rotate(230deg);   
+    }
+    64% {
+        transform: rotate(245deg);
+    }
+    68% {
+        transform: rotate(260deg);  
+    }
+    72% {
+        transform: rotate(275deg);    
+    }
+    76% {
+        transform: rotate(290deg);   
+    }
+    80% {
+        transform: rotate(305deg);
+    }
+    84% {
+        transform: rotate(320deg);  
+    }
+    88% {
+        transform: rotate(335deg);    
+    }
+    92% {
+        transform: rotate(350deg);   
+    }
+    96% {
+        transform: rotate(365deg);    
+    }
+    to {
+        transform: rotate(380deg);   
     }
 }
