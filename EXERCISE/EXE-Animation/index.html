@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="Author" content="Patrick Saint-Louis" />
+	<title>Feedback Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+	
+		<div class="shape"></div>
+		<h1>Review Form</h1>
+		
+		<form action="" method="" autocomplete>
+
+				<table>
+					<tr>
+						<th>
+							<label for="fn">*First Name:</label>
+						</th>
+						<td>
+							<input type="text" id="fn" pattern="[a-zA-Z]+"  minlength="2" maxlength="50"
+								placeholder="John" required>
+						</td>
+					</tr>
+
+					<tr>
+						<th>
+							<label for="ln">*Last Name:</label>
+						</th>
+						<td>
+							<input type="text" id="ln" pattern="[a-zA-Z]+" minlength="2" maxlength="50"
+								placeholder="Doe" required>
+						</td>
+					</tr>
+
+
+					<tr>
+						<th>
+							<label for="ag">*Age:</label>
+						</th>
+						<td>
+							<input type="number" id="ag" min="18" max="100" step="1" required>
+						</td>
+					</tr>
+
+					<tr>
+						<th>
+							<label>*Gender</label>
+						</th>
+						<td>
+							<label>
+								Male
+								<input type="radio" name="gender" value="Male" required />
+							</label>
+
+							<label>
+								Female
+								<input type="radio" name="gender" value="Female" required />
+							</label>
+
+							<label>
+								Other
+								<input type="radio" name="gender" value="Other" required />
+							</label>
+						</td>
+					</tr>
+
+
+					<tr>
+						<th>
+							<label for="ph">*Phone Number:</label>
+						</th>
+						<td>
+							<input type="tel" id="ph" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="514-999-9999"
+								required>
+						</td>
+
+						</p>
+					</tr>
+
+					<tr>
+						<th>
+							<label for="em">*Email:</label>
+						</th>
+						<td>
+							<input type="email" id="em" placeholder="jondoe@jd.com" required />
+						</td>
+					</tr>
+
+					<tr>
+						<datalist id="client-city">
+							<option value="Montreal">
+							<option value="Laval">
+							<option value="Longueuil">
+						</datalist>
+						<th>
+							<label for="ct">City</label>
+						</th>
+						<td>
+							<input type="text" id="ct" list="client-city" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label for="cm">Add your comments below</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<textarea rows="6" cols="40" id="cm"
+								placeholder="Use only the characters a-z, A-Z, and 0-9" autofocus></textarea>
+						</td> 
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="submit" value="SEND">
+						</td> 
+					</tr>
+				</table>
+	
+
+			
+
+		</form>
+
+	</div>
+</body>
+
+</html>
