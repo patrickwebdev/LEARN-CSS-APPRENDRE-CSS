@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    padding: 1% 0 1% 0;
+    text-align: center;
+}
+
+
+table {
+    margin: 0 auto 0 auto;
+    text-align: left;
+    line-height: 200%;
+}
+
+tr:nth-child(10)>td {
+    text-align: right;
+  }
+
+form{
+margin: 0 13% 0 13%;
+}
+
+
+/*animation*/
+
+body {
+    animation-name: bd-colors;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-iteration-count:infinite;
+}
+
+
+h1{
+    animation-name: txt-colors;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-iteration-count:infinite;
+}
+
+.shape{
+    height:30px;
+    width: 30px;
+    margin: 0 auto 0 auto;
+    animation-name: bd-radius, bg-colors;
+    animation-duration: 15s, 15s;
+    animation-delay: 2s;
+    animation-iteration-count:infinite;
+}
+
+
+.combine{
+    display:inline-block;
+}
+@keyframes bg-colors {
+    0%, 120% {
+        background-color: red;
+    }
+    20% {
+        background-color: yellow;
+    }
+    40% {
+        background-color: blue;
+    }
+    60% {
+        background-color: rgb(21, 255, 0);
+    }
+    80% {
+        background-color: rgba(255, 140, 0, 0.972);
+    }
+    100% {
+        background-color: rgb(0, 255, 255);
+    }
+}
+
+@keyframes bd-colors {
+    0%, 90% {
+        border:10px solid red;
+    }
+    15% {
+        border:10px solid yellow;
+    }
+    30% {
+        border:10px solid blue;
+    }
+    45% {
+        border:10px solid rgb(21, 255, 0);
+    }
+    60% {
+        border:10px solid rgba(255, 140, 0, 0.972);
+    }
+    75% {
+        border:10px solid rgb(0, 255, 255);
+    }
+}
+
+@keyframes txt-colors {
+    0%, 100% {
+        color: red;
+    }
+    90% {
+        color:  rgb(21, 255, 0);
+    }
+    70% {
+        color: blue;
+    }
+    50% {
+        color: yellow;
+    }
+    30% {
+        color: rgba(255, 140, 0, 0.972);
+    }
+    10% {
+        color: rgb(0, 255, 255);
+    }
+}
+
+@keyframes bd-radius {
+    0%, 100% {
+        border-radius: 100%;
+    }
+    90% {
+        border-radius: 90%;
+    }
+    70% {
+        border-radius: 70%;
+    }
+    50% {
+        border-radius: 50%;
+    }
+    30% {
+        border-radius: 30%;
+    }
+    10% {
+        border-radius: 10%;
+    }
+}
+
+
