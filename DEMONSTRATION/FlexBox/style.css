@@ -132,6 +132,62 @@ a {
     color: #040404;
 }
 
+div.main1 {
+    width: 50%;
+    height: 600px;
+    padding: 0;
+    margin: 30px auto 30px auto;
+    border: 2px solid #070707;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content :flex-start;
+
+}
+
+div.main1 div {
+    background-color: #000000;
+    border-top: 6px solid #ff0000;
+    border-bottom: 6px solid #ff0000;
+    border-right: 6px solid #0fb500;
+    border-left: 6px solid #0fb500;
+    color: #fff;
+    font-weight: bold;
+    padding: .5em;
+    margin: .5em;
+    height: 100px;
+}
+
+div.main2 {
+    width: 50%;
+    padding: 0;
+    margin: 30px auto 30px auto;
+    border: 2px solid #070707;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+
+}
+
+div.main2 div {
+    background-color: #000000;
+    border-top: 6px solid #ff0000;
+    border-bottom: 6px solid #ff0000;
+    border-right: 6px solid #0fb500;
+    border-left: 6px solid #0fb500;
+    color: #fff;
+    font-weight: bold;
+    padding: .5em;
+    margin: .5em;
+}
+
+
+
 .vertical-flex {
     display: flex;
     flex-direction: column;
